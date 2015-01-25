@@ -24,6 +24,8 @@ input {
 }
 
 
+
+
 /*Global*/
 .action-button {
   font-size: 25px;
@@ -44,6 +46,14 @@ input {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+.action-button.small {
+  margin-top: -5px;
+  font-size: 15px;
+  padding: 5px 9px;
+}
+
+
+
 
 /*application*/
 #main-outer {
@@ -114,7 +124,7 @@ nav ul li {
   margin-left: -291px;
 }
 .action-button.get-started {
-  margin-left: -77px;
+  margin-left: -154px;
   position: relative;
   left: 50%;
 }
