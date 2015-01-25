@@ -1,3 +1,147 @@
 html, body {
-  margin: 20px;
+  margin: 0px;
+  height: 100%;
+}
+body {
+  background-color: #07c;
+}
+* {
+  font-family: 'Open Sans';
+}
+.clear {
+  clear: both;
+}
+input {
+  font-size: 13px;
+  color: #444;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  font-family: 'Open Sans';
+}
+.ember-view {
+  height: 100%;
+}
+
+
+/*Global*/
+.action-button {
+  font-size: 25px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background-color: #fff;
+  color: #07c;
+  margin-top: 25px;
+  -webkit-box-shadow: 0 0px 3px .1px rgba(0,0,0,.3);
+  box-shadow: 0 0px 3px .1px rgba(0,0,0,.3);
+}
+.action-button:hover {
+  background-color: #005997;
+  color: #fefefe;
+  border: 1px solid #005997;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/*application*/
+#main-outer {
+  float: right;
+  right: 50%;
+  position: relative;
+}
+#main-inner {
+  float: right;
+  right: -50%;
+  top: 100px;
+  position: relative;
+}
+
+
+/*nav*/
+nav {
+  height: 10%;
+  width: 100%;
+  background-color: #004677;
+  -webkit-box-shadow: 0 3px 3px .1px rgba(0,0,0,.1);
+  box-shadow: 0 3px 3px .1px rgba(0,0,0,.1);
+}
+nav #logo {
+  height: 100%;
+  width: 50%;
+  float: left;
+}
+nav #logo img {
+  height: 90%;
+  top: 5%;
+  position: relative;
+}
+nav #links {
+  width: 515px;
+  float: right;
+  top: 50%;
+  position: relative;
+  margin-top: -13px;
+}
+nav ul {
+  margin: 0px;
+}
+nav ul li {
+  margin: 0px;
+  list-style: none;
+  color: #fefefe;
+  font-weight: 100;
+  float: left;
+  margin-right: 40px;
+}
+
+
+/*index*/
+.view-index #logo {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  left: 50%;
+  margin-left: -150px;
+}
+.view-index #slogan{
+  font-weight: 100;
+  color: #fefefe;
+  font-size: 16px;
+  position: relative;
+  left: 50%;
+  margin-left: -291px;
+}
+.action-button.get-started {
+  margin-left: -77px;
+  position: relative;
+  left: 50%;
+}
+
+
+
+/*Login*/
+.view-login {
+}
+.view-login #title {
+  font-size: 25px;
+  color: #fefefe;
+  text-shadow: 0px 0px 2px rgba(100, 100, 100, 1);
+  margin-bottom: 22px;
+}
+.view-login form {
+  width: 200px;
+}
+.view-login form label,.view-login form input {
+  display: block;
+  float: left;
+}
+.view-login label {
+  color: #fefefe;
+  font-weight: 100;
+  margin-bottom: 5px;
+}
+.view-login input {
+  margin-bottom: 10px;
 }

@@ -1,3 +1,18 @@
-<h2 id="title">Welcome to Ember.js</h2>
-
-{{outlet}}
+<script type="text/javascript" src="bower_components/jso/build/jso.js"></script>
+<nav>
+  <div id='logo'><img src='assets/images/seminars_me_logo_120.png' /></div>
+  <div id='links'>
+    <ul>
+        {{#link-to 'index' tagName='li'}}Home{{/link-to}}
+        {{#link-to 'index' tagName='li'}}Search for Experts{{/link-to}}
+        {{#link-to 'index' tagName='li'}}Contact Us{{/link-to}}
+        {{#link-to 'index' tagName='li'}}Login{{/link-to}}
+    </ul>
+  </div>
+  <div class='clear'>
+</nav>
+<div id='main-outer'>
+  <div id='main-inner'>
+    {{outlet class='outlet-application'}}
+  </div>
+</div>
