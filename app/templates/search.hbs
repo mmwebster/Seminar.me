@@ -1,3 +1,15 @@
-<div id='logo'><img src='assets/images/seminars_me_logo_300.png'></div>
-<div id='slogan'>Connecting experts who love to inspire with communities who love to be inspired</div>
-<button class='get-started action-button'>TIME TO SEARCHHH</button>
+<div id='search'>
+  <form>
+    <label class='question_label'>Title your gig</label>
+    <input class='question_input' placeholder="Ex: Hosting a great entrepreneurship talk in Monterey!"></input>
+    <label class='question_label'>Describe the speaker you are looking for</label>
+    <textarea class='question_input' placeholder="I am looking for..." cols='58' rows='6'></textarea>
+    <label class='question_label'>What expertise should your speaker have?</label>
+    {{view "select" class='question_input' content=skills value=selectedSkill}}
+    {{#if skillSelected}}
+      <div id='speakers-matches'>
+        <label class='question_label'>Potential speakers:</label>
+      </div>
+    {{/if}}
+  </form>
+</div>
