@@ -26,12 +26,5 @@ export default Ember.ObjectController.extend({
       this.transitionToRoute('index');
     }
   }
-  // unauthenticate: function() {
-  //   if(this.get('authenticated')) {
-  //     console.log('unauthenticating user');
-  //     this.set('authenticated', false);
-  //     this.transitionToRoute('index');
-  //   }
-  // }
 
 });
