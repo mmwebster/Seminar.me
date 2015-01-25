@@ -1,0 +1,12 @@
+// app/controllers/application.js
+import Ember from "ember";
+
+export default Ember.ObjectController.extend({
+  needs: ["application"],
+
+  actions: {
+    authenticate: function() {
+      this.get('controllers.application').authenticate();
+    }
+  }
+});

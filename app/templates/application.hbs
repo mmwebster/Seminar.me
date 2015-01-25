@@ -6,10 +6,10 @@
         {{#link-to 'index' tagName='li'}}Home{{/link-to}}
         {{#link-to 'index' tagName='li'}}Search for Experts{{/link-to}}
         {{#link-to 'index' tagName='li'}}Contact Us{{/link-to}}
-        {{#if session.isAuthenticated}}
-          <li><button class='action-button small' {{action 'invalidateSession'}}>Logout</button></li>
+        {{#if authenticated}}
+          <li><button class='action-button small' {{action 'unauthenticate'}}>Logout</button></li>
         {{else}}
-          <li><button class='action-button small' {{action 'authenticateSession'}}>Login</button></li>
+          <li><button class='action-button small' {{action 'authenticate'}}>Login</button></li>
         {{/if}}
     </ul>
   </div>
