@@ -12,13 +12,6 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
-    torii: {
-      providers: {
-        'linkedin-oauth2': {
-          scope: 'user:email'
-        }
-      }
-    },
 
     APP: {
       // Here you can pass flags/options to your application instance
@@ -49,13 +42,6 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
-
-  ENV['simple-auth-oauth2'] = {
-    serverTokenEndpoint: ENV.host + "/oauth/token",
-    serverTokenRevocationEndpoint: ENV.host + '/oauth/revoke',
-    refreshAccessTokens: true,
-    session: 'session:custom'
-  };
 
   return ENV;
 };
