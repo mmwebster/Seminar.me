@@ -8,27 +8,30 @@ export default Ember.ObjectController.extend({
 
   // actions
   actions: {
-    authenticate: function() {
-      this.athenticate();
-    },
-    unauthenticate: function() {
-      this.unauthenticate();
+    authenticationToggle: function() {
+      this.authenticationToggle();
     }
   },
 
-  authenticate: function() {
+  authenticationToggle: function() {
     if(!this.get('authenticated')) {
-      console.log('authenticating user');
+      // loggin in
+      console.log('toggling authentication (ON)');
       this.set('authenticated', true);
       this.transitionToRoute('search');
-    }
-  },
-  unauthenticate: function() {
-    if(this.get('authenticated')) {
-      console.log('unauthenticating user');
+    }else {
+      //logging out
+      console.log('toggling authentication (OFF)');
       this.set('authenticated', false);
       this.transitionToRoute('index');
     }
   }
+  // unauthenticate: function() {
+  //   if(this.get('authenticated')) {
+  //     console.log('unauthenticating user');
+  //     this.set('authenticated', false);
+  //     this.transitionToRoute('index');
+  //   }
+  // }
 
 });

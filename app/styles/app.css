@@ -4,6 +4,7 @@ html, body {
 }
 body {
   background-color: #07c;
+  min-width: 750px;
 }
 * {
   font-family: 'Open Sans';
@@ -76,10 +77,11 @@ nav {
   background-color: #004677;
   -webkit-box-shadow: 0 3px 3px .1px rgba(0,0,0,.1);
   box-shadow: 0 3px 3px .1px rgba(0,0,0,.1);
+  min-width
 }
 nav #logo {
   height: 100%;
-  width: 50%;
+  width: 30%;
   float: left;
 }
 nav #logo img {
@@ -96,6 +98,7 @@ nav #links {
 }
 nav ul {
   margin: 0px;
+  width: 100%;
 }
 nav ul li {
   margin: 0px;
@@ -105,6 +108,12 @@ nav ul li {
   float: left;
   margin-right: 40px;
 }
+nav ul li:hover {
+  cursor: pointer;
+  color: #0597ff;
+}
+
+
 
 
 /*index*/

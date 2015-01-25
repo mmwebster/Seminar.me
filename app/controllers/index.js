@@ -5,8 +5,8 @@ export default Ember.ObjectController.extend({
   needs: ["application"],
 
   actions: {
-    authenticate: function() {
-      this.get('controllers.application').authenticate();
+    authenticationToggle: function() {
+      this.get('controllers.application').authenticationToggle();
     }
   }
 });
