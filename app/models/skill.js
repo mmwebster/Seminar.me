@@ -5,6 +5,7 @@ var skill = DS.Model.extend({
 
   name: DS.attr('string'),
   rank: DS.attr('number'),
+  user: DS.belongsTo('user')
 
 });
 

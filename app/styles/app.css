@@ -52,6 +52,18 @@ input {
   font-size: 15px;
   padding: 5px 9px;
 }
+.button.small {
+  border: 1px solid #fff;
+  border-radius: 6px;
+  margin-top: -5px;
+  font-size: 15px;
+  padding: 5px 9px;
+  background-color: #fff;
+  color: #07c;
+  margin-top: 25px;
+  -webkit-box-shadow: 0 0px 3px .1px rgba(0,0,0,.3);
+  box-shadow: 0 0px 3px .1px rgba(0,0,0,.3);
+}
 
 
 
@@ -195,6 +207,7 @@ nav ul li:hover {
   font-size: 16px;
   color: #07c;
   margin-bottom: 15px;
+  width: 90%;
 }
 
 #search select {

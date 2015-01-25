@@ -4,9 +4,14 @@ import Ember from "ember";
 export default Ember.ObjectController.extend({
 
   // Properties
+  needs: ['application'],
   selectedSkill: 'Select a skill',
   skills: ["Select a skill", "Entrepreneurship", "Marketing", "Mobile Development", "Business Development"],
   skillSelected: false,
+  users: function() {
+    return this.get('controllers.application.model')
+  }.property('controllers.application.model.@each'),
+
 
 
   // Observers

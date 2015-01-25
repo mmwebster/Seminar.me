@@ -9,6 +9,11 @@
     {{#if skillSelected}}
       <div id='speakers-matches'>
         <label class='question_label'>Potential speakers:</label>
+        {{#each user in users}}
+          <p>{{user.firstName}} {{user.lastName}}</p>
+          <p>Rating: {{user.rating}}</p>
+          <p>Skills {{#each skill in skills}}<button class='button small'>{{skill.name}}</button>{{/each}}</p>
+        {{/each}}
       </div>
     {{/if}}
   </form>
