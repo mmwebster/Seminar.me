@@ -9,7 +9,7 @@ export default Ember.ObjectController.extend({
   skills: ["Select a skill", "Entrepreneurship", "Marketing", "Mobile Development", "Business Development"],
   skillSelected: false,
   users: function() {
-    return this.get('controllers.application.model')
+    return this.get('controllers.application.model');
   }.property('controllers.application.model.@each'),
 
 
@@ -24,11 +24,21 @@ export default Ember.ObjectController.extend({
       $( "body" ).animate({
         scrollTop: "+=350"
       }, 600, function() {
-        console.log('finished scrolling')
+        console.log('finished scrolling');
       });
     }
 
     // Logic for first or new selection.
 
-  }.observes('selectedSkill')
+  }.observes('selectedSkill'),
+
+  // Actions
+  actions: {
+    addSpeaker: function(user) {
+      console.log('adding speaker to be invited');
+      // target = '.speaker.' + this.hbs_id + ' .add';
+      debugger;
+      $('.speaker.' + this.hbs_id + ' .add').toggleClass('added')
+    }
+  }
 });

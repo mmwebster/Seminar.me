@@ -7,12 +7,26 @@
     <label class='question_label'>What expertise should your speaker have?</label>
     {{view "select" class='question_input' content=skills value=selectedSkill}}
     {{#if skillSelected}}
-      <div id='speakers-matches'>
-        <label class='question_label'>Potential speakers:</label>
+      <div id='speaker-matches'>
+        <h3>Invite speakers to your gig (they will not see who else is invited.)</h3>
         {{#each user in users}}
-          <p>{{user.firstName}} {{user.lastName}}</p>
-          <p>Rating: {{user.rating}}</p>
-          <p>Skills {{#each skill in skills}}<button class='button small'>{{skill.name}}</button>{{/each}}</p>
+          <div {{bind-attr class=':speaker user.hbs_id'}}>
+            <div class='add' {{action 'addSpeaker' this}}>
+              <p>+</p>
+            </div>
+            <div class='left'>
+              <img src='assets/images/empty_avatar.png' class='avatar' />
+              <div class='name'>{{user.firstName}} {{user.lastName}}</div>
+              <div class='rating'>{{{user.rating}}}</div>
+              <div class='clear'></div>
+            </div>
+            <div class='right'>
+              <div class='bio'>{{{user.bio}}}</div>
+              <div class='skills'>{{{user.skills}}}</div>
+              <div class='clear'></div>
+            </div>
+            <div class='clear'></div>
+          </div>
         {{/each}}
       </div>
     {{/if}}

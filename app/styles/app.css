@@ -23,6 +23,12 @@ input {
 .ember-view {
   height: 100%;
 }
+h3 {
+  color: #fefefe;
+  font-size: 18px;
+  margin: 10px 0px 10px 0px;
+  font-weight: 100;
+}
 
 
 
@@ -56,6 +62,7 @@ input {
   border: 1px solid #fff;
   border-radius: 6px;
   margin-top: -5px;
+  margin-right: 10px;
   font-size: 15px;
   padding: 5px 9px;
   background-color: #fff;
@@ -230,6 +237,72 @@ nav ul li:hover {
   white-space: nowrap;
   width: 300px;
 }
-#search #speakers-matches {
+#search #speaker-matches {
   min-height: 600px;
+}
+#speaker-matches .speaker {
+  margin: 0px 0px 15px 0px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 170px;
+}
+#speaker-matches .add {
+  width: 5%;
+  float: left;
+  background-color: #eee;
+  border-radius: 6px 0px 0px 6px;
+  height: 100%;
+  box-sizing: border-box;
+  color: #005677;
+}
+#speaker-matches .add:hover {
+  background-color: #005677;
+  color: #eee;
+  cursor: pointer;
+}
+#speaker-matches .add p{
+  font-size: 30px;
+  color: inherit;
+  padding: 22px 0px 0px 6px;
+}
+#speaker-matches .left {
+  width: 20%;
+  float: left;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  box-sizing: border-box;
+  height: 100%;
+}
+#speaker-matches .avatar {
+  border-radius: 100px;
+  width: 85px;
+  position: relative;
+  left: 50%;
+  margin-left: -42px;
+  margin-top: 10px;
+}
+#speaker-matches .left div {
+  text-align: center;
+  color: #fefefe;
+  font-weight: 100;
+}
+#speaker-matches .left .rating img {
+  width: 15px;
+  margin-right: 5px;
+}
+#speaker-matches .right {
+  width: 70%;
+  float: left;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-radius: 0px 6px 6px 0px;
+  box-sizing: border-box;
+  height: 100%;
+}
+#speaker-matches .right .bio {
+  margin-top: 10px;
+  color: #fefefe;
+  font-weight: 100;
 }
