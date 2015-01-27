@@ -1,4 +1,5 @@
 // app/controllers/application.js
+/*global $ */
 import Ember from "ember";
 
 export default Ember.ObjectController.extend({
@@ -21,7 +22,8 @@ export default Ember.ObjectController.extend({
     // Selection has now been made.
     if(!this.get('skillSelected')) {
       this.set('skillSelected', true);
-      $( "body" ).animate({
+      // debugger;
+      $("body").animate({
         scrollTop: "+=350"
       }, 600, function() {
         console.log('finished scrolling');
@@ -36,9 +38,7 @@ export default Ember.ObjectController.extend({
   actions: {
     addSpeaker: function(user) {
       console.log('adding speaker to be invited');
-      // target = '.speaker.' + this.hbs_id + ' .add';
-      debugger;
-      $('.speaker.' + this.hbs_id + ' .add').toggleClass('added')
+      $('.speaker.' + user.hbs_id + ' .add').toggleClass('added');
     }
   }
 });
