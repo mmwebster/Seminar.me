@@ -1,6 +1,8 @@
 import Ember from "ember";
+// Ember simple auth
+import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin';
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(ApplicationRouteMixin, {
 
   beforeModel: function() {
     console.log('application_route');

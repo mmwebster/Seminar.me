@@ -4,17 +4,9 @@
   <div id='links'>
     <ul>
         {{#link-to 'index' tagName='li'}}Home{{/link-to}}
-        {{#if authenticated}}
-          {{#link-to 'search' tagName='li'}}Search for Experts{{/link-to}}
-        {{else}}
-          {{#link-to 'index' tagName='li'}}Search for Experts{{/link-to}}
-        {{/if}}
+        {{#link-to 'search' tagName='li'}}Search for Experts{{/link-to}}
         {{#link-to 'index' tagName='li'}}Contact Us{{/link-to}}
-        {{#if authenticated}}
-          <li><button class='action-button small' {{action 'authenticationToggle'}}>Logout</button></li>
-        {{else}}
-          <li><button class='action-button small' {{action 'authenticationToggle'}}>Login</button></li>
-        {{/if}}
+        <li><button class='action-button small'>Login</button></li>
     </ul>
   </div>
   <div class='clear'>

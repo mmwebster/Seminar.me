@@ -1,7 +1,4 @@
 <div id='logo'><img src='assets/images/seminars_me_logo_300.png'></div>
 <div id='slogan'>Connecting experts who love to inspire with communities who love to be inspired</div>
-{{#if controllers.application.authenticated}}
-  {{#link-to 'search' class='get-started action-button' tagName='button'}}Start Something Awesome{{/link-to}}
-{{else}}
-  <button class='get-started action-button' {{action 'authenticationToggle'}}>Connect through LinkedIn</button>
-{{/if}}
+{{#link-to "login" tagName='button' class='get-started action-button'}}Connect through LinkedIn{{/link-to}}
+
