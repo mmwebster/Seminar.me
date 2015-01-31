@@ -6,7 +6,11 @@
         {{#link-to 'index' tagName='li'}}Home{{/link-to}}
         {{#link-to 'search' tagName='li'}}Search for Experts{{/link-to}}
         {{#link-to 'index' tagName='li'}}Contact Us{{/link-to}}
-        <li><button class='action-button small'>Login</button></li>
+        {{!-- {{#if session.isAuthenticated}}
+          <li><button class='action-button small' {{action 'invalidateSession'}}>Logout</button></li>
+        {{/else}}
+          <li>{{#link-to 'login' tagName='button' class='action-button small'}}Login{{/link-to}}</li>
+        {{/if}} --}}
     </ul>
   </div>
   <div class='clear'>

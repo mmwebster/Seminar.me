@@ -1,3 +1,4 @@
+// config/environment.js
 /* jshint node: true */
 
 module.exports = function(environment) {
@@ -37,6 +38,16 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+
+    ENV['simple-auth-oauth2'] = {
+      serverTokenEndpoint: 'https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=757ll7ci1xd93u&scope=profile'
+    };
+    ENV['simple-auth'] = {
+      // authorizer: 'simple-auth-authenticator:oauth2-password-grant',
+      authorizer: 'simple-auth-authorizer:oauth2-bearer',
+      crossOriginWhitelist: ['https://www.linkedin.com'],
+      store: 'simple-auth-session-store:local-storage'
+    };
   }
 
   if (environment === 'production') {
