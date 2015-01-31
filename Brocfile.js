@@ -17,4 +17,7 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
+// Manually imported libraries
+app.import('/bower_components/in/index.js');
+
 module.exports = app.toTree();

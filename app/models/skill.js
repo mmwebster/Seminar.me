@@ -11,17 +11,17 @@ var skill = DS.Model.extend({
 
 	// Imported from LinkedIn
 	name: DS.attr('string'),
-	rank: DS.attr('number'),
+  user: DS.hasMany('user'),
 	endorsements: DS.attr('number')
 
 });
 
 skill.reopenClass({
   FIXTURES: [
-    {id: "1", name: 'Entreprenuership', rank: 1, users: ["1", "2", "3"]},
-    {id: "2", name: 'Business Development', rank: 2, users: ["1", "3"]},
-    {id: "3", name: 'Marketing', rank: 3, users: [1, 2]},
-    {id: "4", name: 'Mobile Development', rank: 4, users: [1, 3]}
+    {id: "1", name: 'Entreprenuership'},
+    {id: "2", name: 'Business Development'},
+    {id: "3", name: 'Marketing'},
+    {id: "4", name: 'Mobile Development'}
   ]
 });
 

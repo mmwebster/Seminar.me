@@ -26,6 +26,19 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    ENV['simple-auth-oauth2'] = {
+      // serverTokenEndpoint: 'http://localhost:4200/session'
+      serverTokenEndpoint: 'https://www.linkedin.com/uas/oauth2/authorization?response_type=https&client_id=757ll7ci1xd93u&scope=r_fullprofile&state=DCEEFWF45453sdffef000&redirect_uri=http://localhost:4200'
+    };
+    ENV['simple-auth'] = {
+      authorizer: 'simple-auth-authorizer:oauth2-bearer',
+      crossOriginWhitelist: ['*'],
+      // crossOriginWhitelist: ['http://some.other.domain:1234'],
+      // crossOriginWhitelist: ['https://www.linkedin.com'],
+      // crossOriginWhitelist: ['http://localhost:4200'],
+      store: 'simple-auth-session-store:local-storage'
+    };
   }
 
   if (environment === 'test') {
@@ -38,16 +51,6 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
-
-    ENV['simple-auth-oauth2'] = {
-      serverTokenEndpoint: 'https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=757ll7ci1xd93u&scope=profile'
-    };
-    ENV['simple-auth'] = {
-      // authorizer: 'simple-auth-authenticator:oauth2-password-grant',
-      authorizer: 'simple-auth-authorizer:oauth2-bearer',
-      crossOriginWhitelist: ['https://www.linkedin.com'],
-      store: 'simple-auth-session-store:local-storage'
-    };
   }
 
   if (environment === 'production') {

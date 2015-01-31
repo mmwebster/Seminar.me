@@ -14,6 +14,7 @@
     "ember-qunit-notifications": "0.0.5",
     "qunit": "~1.17.1",
     "ember-simple-auth": "0.7.2",
-    "ember-oauth2": "https://github.com/amkirwan/ember-oauth2.git"
+    "ember-oauth2": "https://github.com/amkirwan/ember-oauth2.git",
+    "in": "http://platform.linkedin.com/in.js"
   }
 }
