@@ -1,4 +1,9 @@
-<div id='logo'><img src='assets/images/seminars_me_logo_300.png'></div>
-<div id='slogan'>Connecting experts who love to inspire with communities who love to be inspired</div>
-{{#link-to "login" tagName='button' class='get-started action-button'}}Connect through LinkedIn{{/link-to}}
-
+<div class='stage' id='stage_1'>
+	<div id='logo'><img src='assets/images/seminars_me_logo_300.png'></div>
+	<div id='slogan'>Connecting experts who love to inspire with communities who love to be inspired</div>
+	<button {{action 'learn-more'}} class='action-button learn-more'>Learn More</button>
+	{{#link-to 'login' tagName='button' class='get-started action-button'}}Get Started{{/link-to}}
+</div>
+<div class='stage' id='stage_2'>
+	{{!-- <button {{action 'authenticate' 'linkedin'}} class='get-started action-button'>Connect through LinkedIn</button> --}}
+</div>

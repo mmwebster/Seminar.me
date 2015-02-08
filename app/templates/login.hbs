@@ -1,10 +1,12 @@
-<div id='title'>Connect Through LinkedIn</div>
-<form>
-  <label id='username_label'>Username</label>
-  <input type='username' id='username_input' placeholder="LinkedIn email" />
-  <label id='password_label'>Password</label>
-  <input type='password' id='password_input' placeholder="LinkedIn password" />
-  <div class='clear'></div>
-</form>
+<h2 id='top'>Are you a...</h2>
+<div class='type' id='meetup'>
+	<h3 class='title'>Event Organizer</h3>
+	<button {{action 'authenticate' 'meetup'}} class='action-button'><img src='assets/images/meetup.jpg' />Login with Meetup</button>
+</div>
 
-<button class='action-button' {{action 'authenticate'}}>Start Something Awesome</button>
+<div class='type' id='linkedin'>
+	<h3 class='title'>Professional Speaker</h3>
+	<button {{action 'authenticate' 'linkedin'}} class='action-button'><img src='assets/images/linkedin.png' />Login with Linkedin</button>
+</div>
+
+<div class='clear'></div>

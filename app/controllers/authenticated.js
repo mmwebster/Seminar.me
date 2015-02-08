@@ -1,8 +1,8 @@
-// app/controllers/application.js
+// app/controllers/authenticated.js
 import Ember from "ember";
 
 export default Ember.ObjectController.extend({
 
-	authenticated: false
+	needs: ['application']
 
 });

@@ -1,6 +1,5 @@
-<script type="text/javascript" src="bower_components/jso/build/jso.js"></script>
 <nav>
-  <div id='logo'><img src='assets/images/seminars_me_logo_120.png' /></div>
+  {{#link-to 'index' tagName='div' id='logo' class='action'}}<img src='assets/images/seminars_me_logo_120.png' />{{/link-to}}
   <div id='links'>
     <ul>
         {{#link-to 'index' tagName='li'}}Home{{/link-to}}
@@ -17,22 +16,6 @@
 </nav>
 <div id='main-outer'>
   <div id='main-inner'>
-    <script type="text/javascript" src="http://platform.linkedin.com/in.js">
-      api_key: 1aoxug1iqf92
-      onLoad:  Linkedin.init
-    </script>
-    <script type="IN/Login" data-onAuth="Linkedin.onAuthCallback" data-onLogout="Linkedin.onLogoutCallback">
-        <img src="http://dummyimage.com/1x1/F.gif" onload="Linkedin.userData({id: '<?js= id ?>', firstName : '<?js= firstName ?>', lastName  : '<?js=lastName ?>', headline  : '<?js= headline ?>', pictureUrl: '<?js= pictureUrl ?>'});" />
-    </script>
-    {{!--<script type="text/javascript" src="http://platform.linkedin.com/in.js">
-      api_key: 757ll7ci1xd93u
-    </script>
-    <script type="in/Login">
-      Hello, <?js= firstName ?> <?js= lastName ?>.
-    </script>--}}
-    <script type='text/javascript'>
-      alert('hi');
-    </script>
     {{outlet class='outlet-application'}}
   </div>
 </div>
