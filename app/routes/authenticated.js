@@ -11,21 +11,21 @@ export default Ember.Route.extend({
 
   afterModel: function() {
     // parse auth code from url
-    var auth_code = this.queryString();
+    var query = this.queryString();
 
     // make api request to retrieve auth token
     $.ajax({
       type: 'GET',
       dataType: "json",
-      url: "http://localhost:8080/?num=hello&code=" + auth_code,
+      url: "http://localhost:8080/",
+      data: "authcode=" + query.code,
       success: function (responseData, textStatus, jqXHR) {
-          console.log('attempting');
-          // var data = JSON.parse(responseData);
-          // console.log(data);
-          // console.log('POST success.');
+        // data contains json object returned from node api server
+        var data = responseData;
+        console.log('POST success.');
       },
       error: function (responseData, textStatus, errorThrown) {
-          alert('There was an error while connecting to your account: ' + textStatus);
+          alert('There was an error while connecting to your account: ' + textStatus + ' :: ' + errorThrown);
       }
     });
   },
